@@ -43,6 +43,8 @@ theme_minimal()
 
 ### c. Caption
 
+Figure 1. Pain Level After a Yoga Session vs. No Session: Individual pain level is shown as small violet jitter points to display distribution, while the mean pain level is shown as the larger pink point. Pain level is self-assessed on a pain scale from 1-10.
+
 ### d. Table presentation
 
 ## Problem 2. Affective visualization
