@@ -11,7 +11,8 @@ library(tidyverse)
 library(gt)
 library(janitor)
 library(here)
-mydata <- read.csv("/Users/moniquehernandez/Desktop/ENVS-193DS/assignment/hw-03/Data.csv")
+mydata <- read.csv("/Users/moniquehernandez/Desktop/ENVS-193DS/assignment/hw-03/ENVS HW 3/Data.csv") |>
+  clean_names()
 ```
 
 ## Problem 1. Personal Data
@@ -24,6 +25,20 @@ I could do the mean pain level after each day to analyze if there is a compariso
 
 ```{r}
 
+#base layer: gg plot
+ggplot(mydata, aes(x = did_you_do_yoga, # x-axis
+                   y = pain_level_after)) + # y-axis
+  geom_jitter(height = 0, # no vertical
+              width = 0.15, # narrower jitter
+              color = "violet") + # color for jitter
+  # scond layer: point representing mean
+  stat_summary(geom = "point", # geometry being plotted
+               fun = mean, # function calculating the mean
+               color = "pink", #  color for average
+               size = 5) + # larger point size
+labs(x = "Yoga Session", # labeling x-axis
+     y= "Pain Scale After Yoga") # labeling y-axis
+theme_minimal()
 ```
 
 ### c. Caption
