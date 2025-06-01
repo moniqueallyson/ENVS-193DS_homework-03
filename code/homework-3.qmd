@@ -1,0 +1,51 @@
+---
+title: " ENVS-193DS Homework 03"
+author: Monique Hernandez
+format: html
+---
+
+[GitHub Repository](https://github.com/moniqueallyson/ENVS-193DS_homework-03.git)
+
+```{r}
+library(tidyverse)
+library(gt)
+library(janitor)
+library(here)
+mydata <- read.csv("/Users/moniquehernandez/Desktop/ENVS-193DS/assignment/hw-03/Data.csv")
+```
+
+## Problem 1. Personal Data
+
+### a. Data Summarizing
+
+I could do the mean pain level after each day to analyze if there is a comparison between the days I do yoga and the days I don't do yoga. between the days I do and don't yoga. Though, there aren't any changes for the days I don't practice yoga, so I could calculate the change in pain on days I do practice such as subtracting the pain before from the pain after to measure if yoga does help chronic pain.
+
+### b. Visualization
+
+```{r}
+
+```
+
+### c. Caption
+
+### d. Table presentation
+
+## Problem 2. Affective visualization
+
+### a. Describe affective visualization
+
+### b. Create a sketch
+
+### c. Make a draft of your visualization
+
+### d. Write an artist statement
+
+## Problem 3. Statistical critique
+
+### a. Revisit and summarize
+
+### b. Visual clarity
+
+### c. Aesthetic clarity
+
+### d. Recommendations
