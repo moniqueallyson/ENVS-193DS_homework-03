@@ -75,7 +75,6 @@ Pain_summary |> # use summarized data
     title = "Average Pain Levels After Yoga vs. No Yoga" # add title on top of the table
   )
 
-
 ```
 
 ## Problem 2. Affective visualization
@@ -87,9 +86,7 @@ The image of a dark, vast ocean with a small boat can depict the isolation of de
 ### b. Create a sketch
 
 
-
 ### c. Make a draft of your visualization
-
 
 
 ### d. Write an artist statement
@@ -106,8 +103,15 @@ The image of a dark, vast ocean with a small boat can depict the isolation of de
 
 ### a. Revisit and summarize
 
+The statistical tool is the Mann-Whitney test which is needed to compare the two independent variables which are the communities that were used in the study. The response variable is the quality of the park and the predictor variable is the location. The Mann-Whitney test will be used to compare the quality of the park to its socio-
+economic status and background. A significant result would be that there is a disparity between park quality and location due to its population composition such as educational levels, race, and economic status.
+
 ### b. Visual clarity
+
+The author chose to present their statistical findings in a table rather than a figure. Table 3 is well-organized, displaying key summary statistics such as the median, mean, and standard deviation for each park quality category across the two cities. It also includes the Mann-Whitney U statistic and corresponding p-values, which clearly communicate the statistical comparisons. Though, it seems that interpretation can be less intuitive for some readers as it is depicted as a table versus a figure which is important to understanding distributions.
 
 ### c. Aesthetic clarity
 
+
 ### d. Recommendations
+
