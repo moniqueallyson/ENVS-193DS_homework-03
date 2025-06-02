@@ -44,7 +44,7 @@ theme_minimal()
 
 ### c. Caption
 
-Figure 1. Pain Level After a Yoga Session vs. No Session: Individual pain level is shown as small violet jitter points to display distribution, while the mean pain level is shown as the larger pink point. Pain level is self-assessed on a pain scale from 1-10.
+**Figure 1. Pain Level After a Yoga Session vs. No Session:** Individual pain level is shown as small violet jitter points to display distribution, while the mean pain level is shown as the larger pink point. Pain level is self-assessed on a pain scale from 1-10.
 
 ### d. Table presentation
 
@@ -76,7 +76,6 @@ Pain_summary |>
 The image of a dark, vast ocean with a small boat can depict the isolation of dealing with chronic pain as it can feel like a long lonely journey. There is a small streak of bright color in the sky depicting a light of hope, in this case the chronic pain can be manageable. The boat is more than the physical vessel, it is a metaphor for struggling to stay afloat on a daily basis.
 
 ### b. Create a sketch
-
 
 ### c. Make a draft of your visualization
 
