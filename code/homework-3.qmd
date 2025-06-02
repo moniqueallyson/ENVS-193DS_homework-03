@@ -6,18 +6,19 @@ format: html
 
 [GitHub Repository](https://github.com/moniqueallyson/ENVS-193DS_homework-03.git)
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(gt)
 library(janitor)
 library(here)
+library(dplyr)
 mydata <- read.csv("/Users/moniquehernandez/Desktop/ENVS-193DS/assignment/hw-03/ENVS HW 3/Data.csv") |>
   clean_names()
 ```
 
 ## Problem 1. Personal Data
 
-### a. Data Summarizing
+### a. Data summarizing
 
 I could do the mean pain level after each day to analyze if there is a comparison between the days I do yoga and the days I don't do yoga. between the days I do and don't yoga. Though, there aren't any changes for the days I don't practice yoga, so I could calculate the change in pain on days I do practice such as subtracting the pain before from the pain after to measure if yoga does help chronic pain.
 
@@ -37,7 +38,7 @@ ggplot(mydata, aes(x = did_you_do_yoga, # x-axis
                color = "pink", #  color for average
                size = 5) + # larger point size
 labs(x = "Yoga Session", # labeling x-axis
-     y= "Pain Scale After Yoga") # labeling y-axis
+     y= "Pain Scale After Yoga") + # labeling y-axis
 theme_minimal()
 ```
 
@@ -46,6 +47,27 @@ theme_minimal()
 Figure 1. Pain Level After a Yoga Session vs. No Session: Individual pain level is shown as small violet jitter points to display distribution, while the mean pain level is shown as the larger pink point. Pain level is self-assessed on a pain scale from 1-10.
 
 ### d. Table presentation
+
+```{r}
+
+Pain_summary <-mydata |> # create new summary object from mydata
+  group_by(did_you_do_yoga) |>
+  summarize(
+    mean_pain = round(mean(pain_level_after, na.rm = TRUE), 1), # calculate the mean
+  )
+
+Pain_summary |>
+  gt() |>
+  cols_label(
+    did_you_do_yoga = "Yoga Session",
+    mean_pain = "Mean Pain Level After (1-10)"
+  ) |>
+  tab_header(
+    title = "Average Pain Levels After Yoga vs. No Yoga"
+  )
+
+
+```
 
 ## Problem 2. Affective visualization
 
