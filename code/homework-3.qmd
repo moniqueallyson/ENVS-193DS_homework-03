@@ -51,19 +51,19 @@ theme_minimal()
 ```{r}
 
 Pain_summary <-mydata |> # create new summary object from mydata
-  group_by(did_you_do_yoga) |>
+  group_by(did_you_do_yoga) |> # group by data whethere yoga was practiced or not
   summarize(
-    mean_pain = round(mean(pain_level_after, na.rm = TRUE), 1), # calculate the mean
+    mean_pain = round(mean(pain_level_after, na.rm = TRUE), 1), # calculate the mean pain level
   )
 
-Pain_summary |>
-  gt() |>
+Pain_summary |> # use summarized data
+  gt() |> # use gt to create a table
   cols_label(
-    did_you_do_yoga = "Yoga Session",
-    mean_pain = "Mean Pain Level After (1-10)"
+    did_you_do_yoga = "Yoga Session", # rename column to Yoga Session from did you do yoga
+    mean_pain = "Mean Pain Level After (1-10)" # rename mean pain to Mean Pain Level After 
   ) |>
   tab_header(
-    title = "Average Pain Levels After Yoga vs. No Yoga"
+    title = "Average Pain Levels After Yoga vs. No Yoga" # add title on top of the table
   )
 
 
