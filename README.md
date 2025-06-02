@@ -10,7 +10,7 @@
 
 **Personal Data:** For two months, data was collected on whether or not yoga was practiced that day to measure the pain scale from 1-10 for the sole purpose of discovering if yoga helps manage chronic pain.
 
-**Statistical Critique Source:** enkins, G. R., Yuen, H. K., Rose, E. J., Maher, A. I., Gregory, K. C., & Cotton, M. E. (2015). Disparities in quality of park play spaces between two cities with diverse income and race/ethnicity composition: A pilot study. International Journal of Environmental Research and Public Health, 12(7), 8009–8022. https://doi.org/10.3390/ijerph120708009
+**Statistical Critique Source:** Jenkins, G. R., Yuen, H. K., Rose, E. J., Maher, A. I., Gregory, K. C., & Cotton, M. E. (2015). Disparities in quality of park play spaces between two cities with diverse income and race/ethnicity composition: A pilot study. International Journal of Environmental Research and Public Health, 12(7), 8009–8022. https://doi.org/10.3390/ijerph120708009
 
 # Data and File Overview
 

@@ -1,17 +1,26 @@
 ---
-title: " ENVS-193DS Homework 03"
+title: "ENVS-193DS Homework 03"
 author: Monique Hernandez
-format: html
+date: June 2, 2025
+format:
+  html:
+    toc: true
+    toc-location: right
+    toc-depth: 3
 ---
 
 [GitHub Repository](https://github.com/moniqueallyson/ENVS-193DS_homework-03.git)
 
 ```{r, message=FALSE, warning=FALSE}
+
+# general use
 library(tidyverse)
 library(gt)
 library(janitor)
 library(here)
 library(dplyr)
+
+# reading in data
 mydata <- read.csv("/Users/moniquehernandez/Desktop/ENVS-193DS/assignment/hw-03/ENVS HW 3/data/Data.csv") |> 
   clean_names()
 ```
@@ -82,6 +91,14 @@ The image of a dark, vast ocean with a small boat can depict the isolation of de
 ### d. Write an artist statement
 
 ## Problem 3. Statistical critique
+
+**Content**: The painting depicts an intense snapshot of a boat out in the middle of the ocean during a stormy, dark night. The dark colors represent the bleakness of chronic pain, while the bright streak of color represents a sense of hope.
+
+**Influence:** When doing this art piece, I thought of an impressionist style—capturing a moment and translating raw emotion into something that can be physically seen and understood by someone who may not feel chronic pain. It is an attempt to turn pain into art through a creative, hands-on approach.
+
+**Form:** The artwork was made with acrylic on a small canvas using an array of colors including orange, red, yellow, and black.
+
+**Process:** I had paint I wanted to use and thought this assignment could be a type of experiment to blend data science and visual art. It took roughly half an hour to an hour since the canvas is small.
 
 ### a. Revisit and summarize
 
