@@ -86,11 +86,13 @@ The image of a dark, vast ocean with a small boat can depict the isolation of de
 
 ### b. Create a sketch
 
+
+
 ### c. Make a draft of your visualization
 
-### d. Write an artist statement
 
-## Problem 3. Statistical critique
+
+### d. Write an artist statement
 
 **Content**: The painting depicts an intense snapshot of a boat out in the middle of the ocean during a stormy, dark night. The dark colors represent the bleakness of chronic pain, while the bright streak of color represents a sense of hope.
 
@@ -99,6 +101,8 @@ The image of a dark, vast ocean with a small boat can depict the isolation of de
 **Form:** The artwork was made with acrylic on a small canvas using an array of colors including orange, red, yellow, and black.
 
 **Process:** I had paint I wanted to use and thought this assignment could be a type of experiment to blend data science and visual art. It took roughly half an hour to an hour since the canvas is small.
+
+## Problem 3. Statistical critique
 
 ### a. Revisit and summarize
 
