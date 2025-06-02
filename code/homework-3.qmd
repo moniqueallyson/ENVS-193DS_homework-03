@@ -12,7 +12,7 @@ library(gt)
 library(janitor)
 library(here)
 library(dplyr)
-mydata <- read.csv("/Users/moniquehernandez/Desktop/ENVS-193DS/assignment/hw-03/ENVS HW 3/Data.csv") |>
+mydata <- read.csv("/Users/moniquehernandez/Desktop/ENVS-193DS/assignment/hw-03/ENVS HW 3/data/Data.csv") |> 
   clean_names()
 ```
 
