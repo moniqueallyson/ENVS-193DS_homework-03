@@ -161,16 +161,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="b.-visualization">b. Visualization</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#base layer: gg plot</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="fu">aes</span>(<span class="at">x =</span> did_you_do_yoga, <span class="co"># x-axis</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">y =</span> pain_level_after)) <span class="sc">+</span> <span class="co"># y-axis</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">height =</span> <span class="dv">0</span>, <span class="co"># no vertical</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="fu">aes</span>(<span class="at">x =</span> did_you_do_yoga, <span class="co"># x-axis variable</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">y =</span> pain_level_after)) <span class="sc">+</span> <span class="co"># y-axis variable </span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">height =</span> <span class="dv">0</span>, <span class="co"># no vertical jitter</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">width =</span> <span class="fl">0.15</span>, <span class="co"># narrower jitter</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">color =</span> <span class="st">"violet"</span>) <span class="sc">+</span> <span class="co"># color for jitter</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">color =</span> <span class="st">"violet"</span>) <span class="sc">+</span> <span class="co"># color of jitter points</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># scond layer: point representing mean</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">"point"</span>, <span class="co"># geometry being plotted</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">"point"</span>, <span class="co"># geometry for summary statistics</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>               <span class="at">fun =</span> mean, <span class="co"># function calculating the mean</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>               <span class="at">color =</span> <span class="st">"pink"</span>, <span class="co">#  color for average</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>               <span class="at">size =</span> <span class="dv">5</span>) <span class="sc">+</span> <span class="co"># larger point size</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>               <span class="at">color =</span> <span class="st">"pink"</span>, <span class="co">#  color for mean point</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>               <span class="at">size =</span> <span class="dv">5</span>) <span class="sc">+</span> <span class="co"># larger point size for mean point</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Yoga Session"</span>, <span class="co"># labeling x-axis</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>     <span class="at">y=</span> <span class="st">"Pain Scale After Yoga"</span>) <span class="sc">+</span> <span class="co"># labeling y-axis</span></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -191,38 +191,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="d.-table-presentation">d.&nbsp;Table presentation</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Pain_summary <span class="ot">&lt;-</span>mydata <span class="sc">|&gt;</span> <span class="co"># create new summary object from mydata</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(did_you_do_yoga) <span class="sc">|&gt;</span> <span class="co"># group by data whethere yoga was practiced or not</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(did_you_do_yoga) <span class="sc">|&gt;</span> <span class="co"># group by data whether yoga was practiced or not</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_pain =</span> <span class="fu">round</span>(<span class="fu">mean</span>(pain_level_after, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="dv">1</span>), <span class="co"># calculate the mean pain level</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>Pain_summary <span class="sc">|&gt;</span> <span class="co"># use summarized data</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> <span class="co"># use gt to create a table</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> <span class="co"># create a formatted table with gt</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">did_you_do_yoga =</span> <span class="st">"Yoga Session"</span>, <span class="co"># rename column to Yoga Session from did you do yoga</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_pain =</span> <span class="st">"Mean Pain Level After (1-10)"</span> <span class="co"># rename mean pain to Mean Pain Level After </span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Average Pain Levels After Yoga vs. No Yoga"</span> <span class="co"># add title on top of the table</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Average Pain Levels After Yoga vs. No Yoga"</span> <span class="co"># add title above the table</span></span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fwyejvstob" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fwyejvstob table {
+<div id="xtetioxmbl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xtetioxmbl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fwyejvstob thead, #fwyejvstob tbody, #fwyejvstob tfoot, #fwyejvstob tr, #fwyejvstob td, #fwyejvstob th {
+#xtetioxmbl thead, #xtetioxmbl tbody, #xtetioxmbl tfoot, #xtetioxmbl tr, #xtetioxmbl td, #xtetioxmbl th {
   border-style: none;
 }
 
-#fwyejvstob p {
+#xtetioxmbl p {
   margin: 0;
   padding: 0;
 }
 
-#fwyejvstob .gt_table {
+#xtetioxmbl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -248,12 +248,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#fwyejvstob .gt_caption {
+#xtetioxmbl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fwyejvstob .gt_title {
+#xtetioxmbl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -265,7 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#fwyejvstob .gt_subtitle {
+#xtetioxmbl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -277,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#fwyejvstob .gt_heading {
+#xtetioxmbl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -289,13 +289,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fwyejvstob .gt_bottom_border {
+#xtetioxmbl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fwyejvstob .gt_col_headings {
+#xtetioxmbl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -310,7 +310,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fwyejvstob .gt_col_heading {
+#xtetioxmbl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -330,7 +330,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#fwyejvstob .gt_column_spanner_outer {
+#xtetioxmbl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -342,15 +342,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#fwyejvstob .gt_column_spanner_outer:first-child {
+#xtetioxmbl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fwyejvstob .gt_column_spanner_outer:last-child {
+#xtetioxmbl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fwyejvstob .gt_column_spanner {
+#xtetioxmbl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -362,11 +362,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#fwyejvstob .gt_spanner_row {
+#xtetioxmbl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fwyejvstob .gt_group_heading {
+#xtetioxmbl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -392,7 +392,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#fwyejvstob .gt_empty_group_heading {
+#xtetioxmbl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -407,15 +407,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#fwyejvstob .gt_from_md > :first-child {
+#xtetioxmbl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fwyejvstob .gt_from_md > :last-child {
+#xtetioxmbl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fwyejvstob .gt_row {
+#xtetioxmbl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -434,7 +434,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#fwyejvstob .gt_stub {
+#xtetioxmbl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -447,7 +447,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fwyejvstob .gt_stub_row_group {
+#xtetioxmbl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -461,15 +461,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#fwyejvstob .gt_row_group_first td {
+#xtetioxmbl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fwyejvstob .gt_row_group_first th {
+#xtetioxmbl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fwyejvstob .gt_summary_row {
+#xtetioxmbl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -479,16 +479,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fwyejvstob .gt_first_summary_row {
+#xtetioxmbl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fwyejvstob .gt_first_summary_row.thick {
+#xtetioxmbl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fwyejvstob .gt_last_summary_row {
+#xtetioxmbl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -498,7 +498,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#fwyejvstob .gt_grand_summary_row {
+#xtetioxmbl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -508,7 +508,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fwyejvstob .gt_first_grand_summary_row {
+#xtetioxmbl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -518,7 +518,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#fwyejvstob .gt_last_grand_summary_row_top {
+#xtetioxmbl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -528,11 +528,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#fwyejvstob .gt_striped {
+#xtetioxmbl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fwyejvstob .gt_table_body {
+#xtetioxmbl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -541,7 +541,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#fwyejvstob .gt_footnotes {
+#xtetioxmbl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -555,7 +555,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fwyejvstob .gt_footnote {
+#xtetioxmbl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -564,7 +564,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fwyejvstob .gt_sourcenotes {
+#xtetioxmbl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -578,7 +578,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#fwyejvstob .gt_sourcenote {
+#xtetioxmbl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -586,72 +586,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#fwyejvstob .gt_left {
+#xtetioxmbl .gt_left {
   text-align: left;
 }
 
-#fwyejvstob .gt_center {
+#xtetioxmbl .gt_center {
   text-align: center;
 }
 
-#fwyejvstob .gt_right {
+#xtetioxmbl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fwyejvstob .gt_font_normal {
+#xtetioxmbl .gt_font_normal {
   font-weight: normal;
 }
 
-#fwyejvstob .gt_font_bold {
+#xtetioxmbl .gt_font_bold {
   font-weight: bold;
 }
 
-#fwyejvstob .gt_font_italic {
+#xtetioxmbl .gt_font_italic {
   font-style: italic;
 }
 
-#fwyejvstob .gt_super {
+#xtetioxmbl .gt_super {
   font-size: 65%;
 }
 
-#fwyejvstob .gt_footnote_marks {
+#xtetioxmbl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fwyejvstob .gt_asterisk {
+#xtetioxmbl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fwyejvstob .gt_indent_1 {
+#xtetioxmbl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fwyejvstob .gt_indent_2 {
+#xtetioxmbl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fwyejvstob .gt_indent_3 {
+#xtetioxmbl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fwyejvstob .gt_indent_4 {
+#xtetioxmbl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fwyejvstob .gt_indent_5 {
+#xtetioxmbl .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fwyejvstob .katex-display {
+#xtetioxmbl .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fwyejvstob div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#xtetioxmbl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -719,6 +719,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="problem-3.-statistical-critique">Problem 3. Statistical critique</h2>
 <section id="a.-revisit-and-summarize" class="level3">
 <h3 class="anchored" data-anchor-id="a.-revisit-and-summarize">a. Revisit and summarize</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="table-3.jpg" class="img-fluid figure-img"></p>
+<figcaption>Table 3 from Disparities in Quality of Park Play Spaces between Two Cities</figcaption>
+</figure>
+</div>
 <p>The statistical tool is the Mann-Whitney test which is needed to compare the two independent variables which are the communities that were used in the study. The response variable is the quality of the park and the predictor variable is the location. The Mann-Whitney test will be used to compare the quality of the park to its socio- economic status and background. A significant result would be that there is a disparity between park quality and location due to its population composition such as educational levels, race, and economic status.</p>
 </section>
 <section id="b.-visual-clarity" class="level3">

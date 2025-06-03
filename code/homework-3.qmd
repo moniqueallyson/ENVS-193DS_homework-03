@@ -105,6 +105,9 @@ I could do an image of a dark, vast ocean with a small boat can depict the isola
 
 ### a. Revisit and summarize
 
+
+![Table 3 from Disparities in Quality of Park Play Spaces between Two Cities](table-3.jpg)
+
 The statistical tool is the Mann-Whitney test which is needed to compare the two independent variables which are the communities that were used in the study. The response variable is the quality of the park and the predictor variable is the location. The Mann-Whitney test will be used to compare the quality of the park to its socio-
 economic status and background. A significant result would be that there is a disparity between park quality and location due to its population composition such as educational levels, race, and economic status.
 
