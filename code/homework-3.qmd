@@ -114,9 +114,8 @@ The author chose to present their statistical findings in a table (Table 3) rath
 
 ### c. Aesthetic clarity
 
-Table #3 is neatly organized with the groups in bold to left indicating park quality categories which is good for guiding the reader's eye. The top row is separated by the two park location in bold, carefully organized with the mean, median, and SD down their respective columns as well as an "all" group. Overall, clutter is avoided with a clean, well-organized table.
+Table #3 is neatly organized with the groups in bold to left indicating park quality categories which is good for guiding the reader's eye. The top row is separated by the two park location in bold, carefully organized with the mean, median, SD, and overall U and p-values down their respective columns as well as an "all" group. Overall, clutter is avoided with a clean, well-organized table.
 
 ### d. Recommendations
 
-
-
+Despite the table being well organized and easy to read, it could benefit from horizontal lines separating the mean, median, SD, and the overall p-values. With three summary statistics (mean, median, SD) presented for each of the three park categories, across two locations and an overall group, along with the U and p-values, the table contains 33 individual values, which can be overwhelming to visually digest. Adding a figure, such as a box plot or jitter plot, can help as it can show the differences in park quality between the two locations at a quick glance. Thus, including a figure can depict trends and variation across park categories more efficiently.
