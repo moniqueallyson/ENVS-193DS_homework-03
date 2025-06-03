@@ -29,4 +29,4 @@
 
 Rendered Output
 
-The rendered .html for this repo is
+The rendered .html for this repo is  [here](http://localhost:3933/)
