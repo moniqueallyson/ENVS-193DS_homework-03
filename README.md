@@ -29,4 +29,4 @@
 
 Rendered Output
 
-The rendered .html for this repo is  [here](https://moniqueallyson.github.io/ENVS-193DS_homework-03/)
+The rendered .html for this repo is  [here](https://moniqueallyson.github.io/ENVS-193DS_homework-03/code/homework-3.html)
