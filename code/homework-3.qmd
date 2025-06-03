@@ -36,16 +36,16 @@ I could do the mean pain level after each day to analyze if there is a compariso
 ```{r}
 
 #base layer: gg plot
-ggplot(mydata, aes(x = did_you_do_yoga, # x-axis
-                   y = pain_level_after)) + # y-axis
-  geom_jitter(height = 0, # no vertical
+ggplot(mydata, aes(x = did_you_do_yoga, # x-axis variable
+                   y = pain_level_after)) + # y-axis variable 
+  geom_jitter(height = 0, # no vertical jitter
               width = 0.15, # narrower jitter
-              color = "violet") + # color for jitter
+              color = "violet") + # color of jitter points
   # scond layer: point representing mean
-  stat_summary(geom = "point", # geometry being plotted
+  stat_summary(geom = "point", # geometry for summary statistics
                fun = mean, # function calculating the mean
-               color = "pink", #  color for average
-               size = 5) + # larger point size
+               color = "pink", #  color for mean point
+               size = 5) + # larger point size for mean point
 labs(x = "Yoga Session", # labeling x-axis
      y= "Pain Scale After Yoga") + # labeling y-axis
 theme_minimal()
@@ -60,19 +60,19 @@ theme_minimal()
 ```{r}
 
 Pain_summary <-mydata |> # create new summary object from mydata
-  group_by(did_you_do_yoga) |> # group by data whethere yoga was practiced or not
+  group_by(did_you_do_yoga) |> # group by data whether yoga was practiced or not
   summarize(
     mean_pain = round(mean(pain_level_after, na.rm = TRUE), 1), # calculate the mean pain level
   )
 
 Pain_summary |> # use summarized data
-  gt() |> # use gt to create a table
+  gt() |> # create a formatted table with gt
   cols_label(
     did_you_do_yoga = "Yoga Session", # rename column to Yoga Session from did you do yoga
     mean_pain = "Mean Pain Level After (1-10)" # rename mean pain to Mean Pain Level After 
   ) |>
   tab_header(
-    title = "Average Pain Levels After Yoga vs. No Yoga" # add title on top of the table
+    title = "Average Pain Levels After Yoga vs. No Yoga" # add title above the table
   )
 
 ```
