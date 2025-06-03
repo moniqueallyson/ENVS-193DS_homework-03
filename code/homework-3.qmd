@@ -114,6 +114,9 @@ The author chose to present their statistical findings in a table (Table 3) rath
 
 ### c. Aesthetic clarity
 
+Table #3 is neatly organized with the groups in bold to left indicating park quality categories which is good for guiding the reader's eye. The top row is separated by the two park location in bold, carefully organized with the mean, median, and SD down their respective columns as well as an "all" group. Overall, clutter is avoided with a clean, well-organized table.
 
 ### d. Recommendations
+
+
 
