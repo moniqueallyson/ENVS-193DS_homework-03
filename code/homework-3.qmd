@@ -81,23 +81,25 @@ Pain_summary |> # use summarized data
 
 ### a. Describe affective visualization
 
-The image of a dark, vast ocean with a small boat can depict the isolation of dealing with chronic pain as it can feel like a long lonely journey. There is a small streak of bright color in the sky depicting a light of hope, in this case the chronic pain can be manageable. The boat is more than the physical vessel, it is a metaphor for struggling to stay afloat on a daily basis.
+I could do an image of a dark, vast ocean with a small boat can depict the isolation of dealing with chronic pain as it can feel like a long lonely journey. I can have a contrast with brihgt and dark colors from the ocean and the sky depicting a ray of light. The light in this case can be a message that the chronic pain can be manageable. The boat could be seen more than the physical vessel, it is a metaphor for struggling to stay afloat on a daily basis.
 
 ### b. Create a sketch
 
+![Sketch of Affective Visualization](sketch-visualization.jpg)
 
 ### c. Make a draft of your visualization
 
+![Final Affective Visualization](affective-visualization.jpg)
 
 ### d. Write an artist statement
 
-**Content**: The painting depicts an intense snapshot of a boat out in the middle of the ocean during a stormy, dark night. The dark colors represent the bleakness of chronic pain, while the bright streak of color represents a sense of hope.
+**Content**: The painting depicts an intense snapshot, out in the middle of the ocean during a stormy, semi-dark night. The dark colors such as blue, purple, and red represent the bleakness of chronic pain, while the bright streak of colors of yellow, orange, and pink represents a sense of hope. The point of view could be coming from being on the boat, but overall it is left for the viewer's interpretation. Lastly,the rough and calm waves depict good and bad days regarding chronic pain.
 
 **Influence:** When doing this art piece, I thought of an impressionist style—capturing a moment and translating raw emotion into something that can be physically seen and understood by someone who may not feel chronic pain. It is an attempt to turn pain into art through a creative, hands-on approach.
 
-**Form:** The artwork was made with acrylic on a small canvas using an array of colors including orange, red, yellow, and black.
+**Form:** The artwork was made with acrylic on a small canvas using an array of colors including purple, pink, orange, red, yellow, and blue.
 
-**Process:** I had paint I wanted to use and thought this assignment could be a type of experiment to blend data science and visual art. It took roughly half an hour to an hour since the canvas is small.
+**Process:** I had paint I have been wanting to use and thought this assignment could be a type of experiment to blend data science and visual art as an outlet for my creativity. It took roughly an hour since the canvas is small, but some layers had to dry though I used the wet acrylic to blend some colors together.
 
 ## Problem 3. Statistical critique
 
@@ -108,7 +110,7 @@ economic status and background. A significant result would be that there is a di
 
 ### b. Visual clarity
 
-The author chose to present their statistical findings in a table rather than a figure. Table 3 is well-organized, displaying key summary statistics such as the median, mean, and standard deviation for each park quality category across the two cities. It also includes the Mann-Whitney U statistic and corresponding p-values, which clearly communicate the statistical comparisons. Though, it seems that interpretation can be less intuitive for some readers as it is depicted as a table versus a figure which is important to understanding distributions.
+The author chose to present their statistical findings in a table (Table 3) rather than a figure displaying key summary statistics such as the median, mean, and standard deviation for each park quality category across the two cities. It also includes the Mann-Whitney U statistic and corresponding p-values, which clearly communicate the statistical comparisons, though the interpretation can be less intuitive for some readers to be .
 
 ### c. Aesthetic clarity
 
